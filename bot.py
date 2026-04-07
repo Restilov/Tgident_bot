@@ -41,24 +41,24 @@ async def show_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "👤  USER\n"
         f"    Full name    : {full_name}\n"
         f"    Username     : {username}\n"
-        f"    User ID      : {user.id}\n"
+        f"    User ID      : <code>{user.id}</code>\n"
         f"    Language     : {lang}\n"
         f"    Bot account  : {is_bot}\n"
         f"    Premium      : {is_premium}\n"
         "\n"
         "💬  CHAT\n"
-        f"    Chat ID      : {chat.id}\n"
+        f"    Chat ID      : <code>{chat.id}</code>\n"
         f"    Chat type    : {chat.type}\n"
         f"    Chat title   : {getattr(chat, 'title', None) or '—'}\n"
         "\n"
         "📨  MESSAGE\n"
         f"    Message ID   : {msg.message_id}\n"
-        f"    Date         : {timestamp}\n"
+        f"    Date         : <code>{timestamp}</code>\n"
         "\n"
         "─────────────────────────"
     )
 
-    await update.message.reply_text(reply)
+    await update.message.reply_text(reply, parse_mode="HTML")
 
 
 def main():
