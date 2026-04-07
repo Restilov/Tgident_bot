@@ -34,9 +34,9 @@ async def show_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
     timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
 
     reply = (
-        "┌─────────────────────────┐\n"
-        "│     IDENTITY REPORT     │\n"
-        "└─────────────────────────┘\n"
+        "─────────────────────────\n"
+        "     IDENTITY REPORT     \n"
+        "─────────────────────────\n"
         "\n"
         "👤  USER\n"
         f"    Full name    : {full_name}\n"
